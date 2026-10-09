@@ -1,0 +1,36 @@
+# Claude Essential Skills - manifest
+# One line per skill source. Both install.ps1 and install.sh read this file.
+#
+# pack | github repo | folder inside the repo | only copy these items (optional, comma-separated)
+#
+# folder ending in /*  = every sub-folder that has a SKILL.md
+# folder "."           = the repo root is the skill (use the 4th column to skip README, .git etc.)
+# The installed folder name always comes from the "name:" line in each SKILL.md.
+
+# --- core: everyone should have these -------------------------------------------
+core     | anthropics/skills                        | skills/skill-creator          |
+core     | anthropics/skills                        | skills/docx                   |
+core     | anthropics/skills                        | skills/pptx                   |
+core     | anthropics/skills                        | skills/xlsx                   |
+core     | anthropics/skills                        | skills/pdf                    |
+core     | anthropics/skills                        | skills/canvas-design          |
+core     | anthropics/skills                        | skills/frontend-design        |
+core     | anthropics/skills                        | skills/theme-factory          |
+core     | anthropics/skills                        | skills/web-artifacts-builder  |
+core     | anthropics/skills                        | skills/mcp-builder            |
+core     | nidhinjs/prompt-master                   | .                             | SKILL.md,references
+
+# --- design: websites, dashboards, slides that do not look AI-generated -----------
+design   | Leonxlnx/taste-skill                     | skills/*                      |
+design   | nextlevelbuilder/ui-ux-pro-max-skill     | .claude/skills/ui-ux-pro-max  |
+
+# --- tiktok: hooks, captions, trends, de-AI scripts (draft only) -----------------
+tiktok   | sergebulaev/tiktok-skills                | skills/*                      |
+
+# --- research (optional): competitor / comment / trend research ------------------
+# Needs a paid ScrapeCreators API key: set SCRAPECREATORS_API_KEY
+research | ScrapeCreators/social-media-research-skills | skills/*                   |
+
+# --- video (optional): let Claude watch videos (frames + transcript) -------------
+# Also installs the watch-skill Python package and registers its MCP server.
+video    | oxbshw/watch-skill                       | skills/*                      |
